@@ -1,19 +1,19 @@
 window.onload = function() {
 
-
+    // INIT SEQUENCE
+    // when page is loaded, display to HTML page the todos
+    let todo_list
+    if( JSON.parse( localStorage.getItem('todo')) == null){
+        todo_list = []
+    } else {
+        todo_list = JSON.parse( localStorage.getItem('todo'))
+    }
 
     function displayTodos(){
 
 
 
-        // INIT SEQUENCE
-        // when page is loaded, display to HTML page the todos
-        let todo_list
-        if( JSON.parse( localStorage.getItem('todo')) == null){
-            todo_list = []
-        } else {
-            todo_list = JSON.parse( localStorage.getItem('todo'))
-        }
+
 
         // clear out the todos
         $('#todo-list').empty()
